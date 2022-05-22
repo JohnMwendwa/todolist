@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import useFormInput from '../hooks/useFormInput'
 import {DispatchContext} from '../context/todos.context';
 import {v4 as uuid} from 'uuid';
+import './AddTodoForm.css'
 
 function AddTodoForm() {
   const dispatch = useContext(DispatchContext);
@@ -13,7 +14,7 @@ function AddTodoForm() {
     reset();
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='AddTodoForm'>
         <input 
         type="text" 
         value={task}
