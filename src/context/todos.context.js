@@ -1,6 +1,6 @@
 import React, { createContext} from 'react';
 import useLocalStorageReducer from '../hooks/useLocalStorageReducer';
-import todosReducer from '../context/todos.context'
+import todosReducer from '../reducer/todos.reducer'
 
 const defaultTodos = [
     {id:1,task:"Learn coding", completed:false},
