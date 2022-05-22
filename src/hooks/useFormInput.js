@@ -9,7 +9,13 @@ function useFormInput(defaultVal) {
         setState(e.target.value);
     }
 
-   return
+ //reset state back to empty
+ const reset = ()=>{
+    setState('');
+}
+
+//return the current state,method to hange state change and a method to reset it
+return [state,handleChange,reset];
 
 }
 
