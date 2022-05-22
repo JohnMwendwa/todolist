@@ -1,0 +1,32 @@
+.TodoApp{
+    background-color:#1f1c18;
+    box-shadow:0 54px 55px rgba(0,0,0,.25),0 -12px 30px rgba(0,0,0,.12),0 4px 6px rgba(0,0,0,.12),0 12px 13px rgba(0,0,0,.17),0 -3px 5px rgba(0,0,0,.09);
+    color:#fff;
+    margin:4rem auto;
+    max-width:50vw;
+    padding:2rem 3rem 3rem;
+}
+
+.TodoApp h1{
+    border-bottom:1px solid hsla(0,0%,100%,.3);
+    font-size:2.6rem;
+    font-weight:400;
+    letter-spacing:.05em;
+}
+.TodoApp h1 span{
+    display:block;
+    font-size:.8rem;
+    margin-bottom:.7rem;
+    margin-left:3px;
+    margin-top:.2rem;
+}
+
+@media screen and (max-width:720px){
+    .TodoApp{max-width:90vw}
+}
+@media screen and (min-width:721px){
+    .TodoApp{max-width:70vw}
+}
+@media screen and (min-width:1200px){
+    .TodoApp{max-width:50vw}
+}
