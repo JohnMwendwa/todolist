@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import useFormInput from '../hooks/useFormInput'
+import {DispatchContext} from '../context/todos.context';
+import {v4 as uuid} from 'uuid';
 
 function AddTodoForm() {
+  const dispatch = useContext(DispatchContext);
+  const [task,handleChange,reset] = useFormInput("");
+  const handleSubmit =(e)=>{
+    e.preventDefault();
+    const newTodo ={task,id:uuid(),completed:false}
+    dispatch({type:"ADD",task:newTodo});
+    reset();
+  }
   return (
-    <form>
-        
+    <form onSubmit={handleSubmit}>
+        <input 
+        type="text" 
+        value={task}
+        onChange={handleChange}
+        />
+        <button>Add Task</button>
     </form>
   )
 }
