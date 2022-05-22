@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Todo from './Todo'
+import {TodosContext} from '../context/todos.context'
 
 function TodoList() {
+    const todos = useContext(TodosContext);
   return (
     <div>
         {todos.map(todo =>(
