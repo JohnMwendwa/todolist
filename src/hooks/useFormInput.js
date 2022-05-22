@@ -1,11 +1,11 @@
-import React from 'react'
+import {useState} from 'react'
 
-function useFormInput() {
-  return (
-    <div>
-        
-    </div>
-  )
+function useFormInput(defaultVal) {
+    //set state 
+    const [state,setState] = useState(defaultVal);
+
+    return 
+
 }
 
 export default useFormInput
