@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useContext,useState } from 'react';
+import {DispatchContext} from '../context/todos.context';
+import EditTodoForm from './EditTodoForm';
+
 
 function Todo({id,todo}) {
+    const dispatch = useContext(DispatchContext);
+    const [isEdit,setIsEdit] = useState(false);
+    const handleEdit =()=>{
+        setIsEdit(!isEdit)
+    }
   return (
-    <div>
+        isEdit ? <EditTodoForm  id={id} todo={todo} toggleEdit={handleEdit}  /> :
+     <div>
         <li>{todo}</li>
-        <button>Edit</button>
-        <button>Delete</button>
+        <button onClick={handleEdit}>Edit</button>
+        <button onClick={()=>dispatch({type:"REMOVE",id:id})}>Delete</button>
     </div>
+    
+      
   )
 }
 
