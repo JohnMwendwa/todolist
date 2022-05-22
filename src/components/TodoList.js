@@ -8,6 +8,7 @@ function TodoList() {
     <div>
         {todos.map(todo =>(
             <Todo 
+            key={todo.id}
             id={todo.id}
             todo={todo.task}
             />
