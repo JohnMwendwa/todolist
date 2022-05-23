@@ -9,8 +9,8 @@ function TodoApp() {
       <h1>TodoList
      <span>A simple React TodoList App</span>
      </h1>
-      <AddTodoForm />
       <TodoList />
+      <AddTodoForm />
     </div>
   )
 }
