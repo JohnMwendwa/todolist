@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { DispatchContext } from "../context/todos.context";
 import useFormInput from '../hooks/useFormInput';
-
+import './EditTodoForm.css'
 
 function EditTodoForm({id,todo,toggleEdit}) {
     const dispatch = useContext(DispatchContext);
@@ -13,7 +13,7 @@ function EditTodoForm({id,todo,toggleEdit}) {
     toggleEdit()
 }
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="EditTodoForm">
         <input 
         type="text" 
         value={task}
