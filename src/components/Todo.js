@@ -1,7 +1,7 @@
 import React, { useContext,useState } from 'react';
 import {DispatchContext} from '../context/todos.context';
 import EditTodoForm from './EditTodoForm';
-
+import './Todo.css';
 
 function Todo({id,todo}) {
     const dispatch = useContext(DispatchContext);
@@ -11,10 +11,18 @@ function Todo({id,todo}) {
     }
   return (
         isEdit ? <EditTodoForm  id={id} todo={todo} toggleEdit={handleEdit}  /> :
-     <div>
-        <li>{todo}</li>
-        <button onClick={handleEdit}>Edit</button>
-        <button onClick={()=>dispatch({type:"REMOVE",id:id})}>Delete</button>
+     <div className='Todo'>
+        <li>
+          {todo}
+          </li>
+      <div className='Todo-buttons'>
+        <button onClick={handleEdit}>
+          <i className="fas fa-pen" />
+        </button>
+        <button onClick={()=>dispatch({type:"REMOVE",id:id})}>
+           <i className="fas fa-trash"/>
+        </button>
+      </div>
     </div>
     
       
