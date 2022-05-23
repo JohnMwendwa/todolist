@@ -1,0 +1,29 @@
+.Todo {
+    display: flex;
+    margin: 3px -3rem 4px;
+    padding: 1.1rem 3rem;
+    height: 77px;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    position: relative;
+    transition: opacity 500ms ease-in-out;
+  }
+   
+.Todo-buttons {
+    flex-shrink: 0;
+    padding-left: 0.7em;
+    margin-left: auto;
+  }
+  
+.Todo-buttons button {
+    border: none;
+    font-size: 1em;
+    margin: 0.4em;
+    background: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    color: #fff;
+  }
+  
