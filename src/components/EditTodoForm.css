@@ -1,0 +1,42 @@
+.EditTodoForm{
+  display:flex;
+  margin: 0 -3rem 4px;
+  padding: 1.1rem 3rem;
+  height: 77px;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  position: relative;
+  transition: opacity 500ms ease-in-out;
+
+    }
+.EditTodoForm input{
+    flex-grow:1;
+    background-color:#f7f1f1;
+    border:none;
+    font-size:medium;
+    outline:none;
+    padding:0 1.5em;
+    }
+.EditTodoForm button{
+    background-color:#8e0e00;
+    border:none;
+    border:1px solid hsla(0,0%,100%,.3);
+    color:#fff;
+    cursor:pointer;
+    font-weight:700;
+    margin-left:5px;
+    padding:0 1.3rem;
+    text-transform:uppercase;
+    transition:background 0.2s ease-out;
+    }
+.EditTodoForm button:hover{
+        background-color:#a01809;
+    }
+    
+.EditTodoForm button,
+.EditTodoForm input{
+        font-family:Quicksand,sans-serif;
+        height:3rem;
+    }
