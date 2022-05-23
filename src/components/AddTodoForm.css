@@ -4,14 +4,25 @@
     margin-top: 10px;
 }
 .AddTodoForm input{
-    background-color:#f7f1f1;border:none;flex-grow:1;font-size:medium;
+    flex-grow:1;
+    background-color:#f7f1f1;
+    border:none;
+    font-size:medium;
     padding:0 1.5em;
+    outline: none;
 }
 .AddTodoForm button{
-    background-color:#8e0e00;border:none;border:1px solid hsla(0,0%,100%,.3);color:#fff;
+    background-color:#8e0e00;
+    border:none;
+    outline: none;
+    border:1px solid hsla(0,0%,100%,.3);
+    color:#fff;
     cursor:pointer;
-    font-weight:700;margin-left:5px;
-    padding:0 1.3rem;text-transform:uppercase;transition:background 0.2s ease-out;
+    font-weight:700;
+    margin-left:5px;
+    padding:0 1.3rem;
+    text-transform:uppercase;
+    transition:background 0.2s ease-out;
 }
 .AddTodoForm button:hover{
     background-color:#a01809
