@@ -10,6 +10,18 @@
     position: relative;
     transition: opacity 500ms ease-in-out;
   }
+
+  .Todo-toggle-btn{
+    margin-right: 10px;
+    border: none;
+    outline: none;
+  }
+  
+.Todo-toggle-btn i{
+color:  #fff;
+background:#8e0e00 ;
+
+}
    
 .Todo-buttons {
     flex-shrink: 0;
@@ -26,4 +38,8 @@
     cursor: pointer;
     color: #fff;
   }
-  
+
+  .Todo-task.completed{
+   text-decoration: line-through 2px black;
+  }
+
