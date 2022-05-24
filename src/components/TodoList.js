@@ -9,6 +9,7 @@ function TodoList() {
       key={todo.id}
       id={todo.id}
       todo={todo.task}
+      completed={todo.completed}
       />
   ))
   return (
