@@ -1,22 +1,26 @@
-import React, { useContext } from 'react'
-import Todo from './Todo'
-import {TodosContext} from '../context/todos.context'
-import './TodoList.css';
+import React, { useContext, useState } from "react";
+import Todo from "./Todo";
+import { TodosContext } from "../context/todos.context";
+import "./TodoList.css";
+import SearchTodos from "./SearchTodos";
+
 function TodoList() {
-    const todos = useContext(TodosContext);
-    const tasks = todos.map(todo =>(
-      <Todo 
+  const [searchTerm, setSearchTerm] = useState("");
+  const todos = useContext(TodosContext);
+  const tasks = todos.map((todo) => (
+    <Todo
       key={todo.id}
       id={todo.id}
       todo={todo.task}
       completed={todo.completed}
-      />
-  ))
+    />
+  ));
   return (
-    <div className='TodoList'>
-     <ul>{tasks}</ul>
+    <div className="TodoList">
+      <SearchTodos setSearch={setSearchTerm} />
+      <ul>{tasks}</ul>
     </div>
-  )
+  );
 }
 
-export default TodoList
+export default TodoList;
