@@ -7,14 +7,20 @@ import SearchTodos from "./SearchTodos";
 function TodoList() {
   const [searchTerm, setSearchTerm] = useState("");
   const todos = useContext(TodosContext);
-  const tasks = todos.map((todo) => (
-    <Todo
-      key={todo.id}
-      id={todo.id}
-      todo={todo.task}
-      completed={todo.completed}
-    />
-  ));
+  const tasks = todos
+    .filter((val) => {
+      return searchTerm.trim().toLowerCase() === ""
+        ? val
+        : val.task.toLowerCase().includes(searchTerm.trim().toLowerCase());
+    })
+    .map((todo) => (
+      <Todo
+        key={todo.id}
+        id={todo.id}
+        todo={todo.task}
+        completed={todo.completed}
+      />
+    ));
   return (
     <div className="TodoList">
       <SearchTodos setSearch={setSearchTerm} />
