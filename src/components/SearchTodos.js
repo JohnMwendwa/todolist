@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import useFormInput from "../hooks/useFormInput";
+import "./SearchTodos.module.css";
 
 export default function SearchTodos({ setSearch }) {
   const [searchQuery, setSearchQuery, reset] = useFormInput("");
