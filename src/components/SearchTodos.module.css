@@ -1,0 +1,25 @@
+.SearchTodos {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  position: relative;
+}
+.SearchTodos input {
+  flex-grow: 1;
+  background-color: #f7f1f1;
+  border: none;
+  font-size: medium;
+  padding-left: 3rem;
+  padding-right: 0.75rem;
+  height: 3rem;
+  outline: none;
+}
+
+.search_icon {
+  position: absolute;
+  text-align: center;
+  width: 2.65rem;
+  line-height: 3rem;
+  background-color: grey;
+  color: black;
+}
