@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import useFormInput from "../hooks/useFormInput";
-import "./SearchTodos.module.css";
+import styles from "./SearchTodos.module.css";
 
 export default function SearchTodos({ setSearch }) {
   const [searchQuery, setSearchQuery, reset] = useFormInput("");
@@ -16,10 +16,11 @@ export default function SearchTodos({ setSearch }) {
   }, [searchQuery, setSearch]);
 
   return (
-    <form onSubmit={handleSearch} className="SearchTodos">
+    <form onSubmit={handleSearch} className={styles.SearchTodos}>
+      <i className={`fas fa-search ${styles.search_icon}`} />
       <input
         type="search"
-        placeholder="Search Todos"
+        placeholder="Search Task"
         value={searchQuery}
         onChange={setSearchQuery}
       />
